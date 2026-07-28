@@ -326,8 +326,20 @@
     flex-shrink: 0;
   }
   @media (max-width: 640px){
-    .flow-strip{ gap: 24px; padding: 32px 24px; }
-    .flow-divider{ display: none; }
+    .flow-strip{
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px 26px;
+    }
+    .flow-item{
+      justify-content: flex-start;
+      padding: 18px 0;
+    }
+    .flow-divider{
+      width: 100%;
+      height: 1px;
+    }
   }
 
   /* ---------- Section shared ---------- */
@@ -630,6 +642,7 @@
     .nav-links{ display:none; }
     .nav-phone{ display:none; }
     .menu-toggle{ display:flex; }
+    .logo-img{ height: 32px; }
     .services-grid{ grid-template-columns: 1fr; }
     .cta-band{ margin: 0 12px; padding: 48px 24px; }
     .footer-cols{ gap: 32px; }
